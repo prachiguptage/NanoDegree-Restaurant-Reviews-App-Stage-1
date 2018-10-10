@@ -210,7 +210,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: calc(50% - 50px);
 }
 #restaurant-name {
   color: #f18200;
@@ -262,6 +262,7 @@ nav h1 a {
 #reviews-list {
   margin: 0;
   padding: 0;
+  padding-bottom: 100px;
 }
 #reviews-list li {
   background-color: #fff;
