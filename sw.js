@@ -27,15 +27,12 @@ self.addEventListener('install',function(e){
 });
 
 self.addEventListener('fetch',function(e){
-	console.log('fetch');
 	e.respondWith(
 		caches.match(e.request).then(function(response){
 			if(response){
-				console.log('Found ',e.request,' in cache');
 				return response;
 			}
 			else{
-				console.log('Can not Find ',e.request,' in cache, Fetching...');
 				return fetch(e.request)
 				.then(function(response){
 					const cloned = response.clone();
